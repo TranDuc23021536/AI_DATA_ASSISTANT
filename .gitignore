@@ -1,0 +1,40 @@
+# Environment variables - KHÔNG BAO GIỜ commit file này lên GitHub!
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual Environment
+venv/
+env/
+.venv/
+ENV/
+
+# Database file (có thể commit hoặc không tuỳ team)
+# Nếu commit thì người khác không cần chạy seed_database.py
+# Nếu không commit thì nhỏ hơn, nhưng phải seed khi clone
+data/ecommerce.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit cache
+.streamlit/
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage

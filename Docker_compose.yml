@@ -1,0 +1,27 @@
+# docker-compose.yml
+# -------------------
+# Orchestrate containers. Dù project này chỉ có 1 service,
+# docker-compose vẫn tiện vì:
+# - Tự load .env file
+# - Volume mounting dễ hơn
+# - Dễ thêm services sau (Redis cache, PostgreSQL, etc.)
+
+version: "3.9"
+
+services:
+  ai-data-assistant:
+    build: .                    # Build từ Dockerfile trong thư mục hiện tại
+    container_name: ai-data-assistant
+    ports:
+      - "8501:8501"             # host:container
+    env_file:
+      - .env                    # Load GROQ_API_KEY từ .env
+    volumes:
+      # Mount thư mục data để database persist khi container restart
+      # Nếu không có volume, database mất khi container stop
+      - ./data:/app/data
+    restart: unless-stopped     # Tự restart nếu crash
+
+# Nếu muốn thêm PostgreSQL sau:
+# volumes:
+#   postgres_data:

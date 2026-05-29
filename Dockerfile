@@ -1,8 +1,3 @@
-# Dockerfile
-# -----------
-# Multi-stage build không cần thiết ở đây vì Python app không compile
-# Dùng Python 3.11 slim (nhỏ hơn full image, đủ cho project này)
-
 FROM python:3.11-slim
 
 # Set working directory trong container

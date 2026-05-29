@@ -1,14 +1,3 @@
-"""
-database.py
------------
-Module quản lý kết nối database và cung cấp schema info cho LLM.
-
-Tại sao tách ra module riêng?
-- Single Responsibility Principle: mỗi file làm 1 việc
-- Dễ test: có thể mock DatabaseManager trong unit tests
-- Dễ mở rộng: sau này muốn hỗ trợ PostgreSQL chỉ cần sửa file này
-"""
-
 import sqlite3
 import os
 from typing import Optional

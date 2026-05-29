@@ -16,11 +16,6 @@ LLM đọc kết quả, viết câu trả lời tự nhiên
     ↓
 Trả về: answer + sql_used + dataframe
 
-TẠI SAO DÙNG LANGCHAIN?
-- LangChain có sẵn abstraction cho LLMs, prompts, chains
-- Dễ switch giữa các LLM providers (OpenAI ↔ Groq ↔ Anthropic)
-- Built-in memory, error handling, retry logic
-- Cộng đồng lớn, nhiều tài liệu
 """
 
 from langchain_core.prompts import ChatPromptTemplate

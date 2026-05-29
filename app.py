@@ -1,28 +1,3 @@
-"""
-app.py
-------
-Streamlit web app - Entry point của toàn bộ project.
-
-Chạy bằng: streamlit run app.py
-
-Streamlit hoạt động như thế nào?
-- Mỗi lần user tương tác (click, type), toàn bộ script chạy lại từ đầu
-- st.session_state: dict persistent giữa các lần "re-run"
-  → Dùng để lưu chat history, agent instance, etc.
-- @st.cache_resource: cache objects nặng (DB connection, agent)
-  → Chỉ khởi tạo 1 lần, không init lại mỗi lần re-run
-
-UI Layout:
-┌─────────────────────────────────────────┐
-│  Sidebar: Config + Suggested Questions  │
-├─────────────────────────────────────────┤
-│  Main: Chat History                     │
-│  [User Q] [AI Answer + Chart + Table]   │
-│  ...                                    │
-│  Input Box (bottom)                     │
-└─────────────────────────────────────────┘
-"""
-
 import streamlit as st
 import pandas as pd
 import os

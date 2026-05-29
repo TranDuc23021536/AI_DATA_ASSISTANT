@@ -1,21 +1,3 @@
-"""
-visualizer.py
--------------
-Module tự động chọn và tạo Plotly chart phù hợp với query result.
-
-Tại sao dùng Plotly thay vì Matplotlib?
-- Plotly: interactive (zoom, hover, click) - tốt cho web app
-- Matplotlib: static image - tốt cho report/paper
-- Streamlit có native support cho Plotly: st.plotly_chart()
-
-Logic "auto-chart":
-- 1 cột số + không có group → histogram/bar đơn giản
-- 1 cột category + 1 cột số → bar chart
-- Cột có chữ "date"/"month"/"year" → line chart (time series)
-- 2+ cột số → scatter plot
-- Cột "percentage"/"percent"/"pct" → pie chart
-"""
-
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go

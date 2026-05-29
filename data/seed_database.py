@@ -1,15 +1,3 @@
-"""
-seed_database.py
-----------------
-Script tạo database SQLite mẫu với dữ liệu e-commerce thực tế.
-Chạy một lần để khởi tạo data trước khi dùng app.
-
-Tại sao dùng SQLite?
-- File-based, không cần cài server (như PostgreSQL/MySQL)
-- Hoàn hảo cho demo/prototype
-- LangChain có SQLDatabase connector built-in cho SQLite
-"""
-
 import sqlite3
 import random
 from datetime import datetime, timedelta

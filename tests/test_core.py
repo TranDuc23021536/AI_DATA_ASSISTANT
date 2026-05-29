@@ -1,20 +1,3 @@
-"""
-tests/test_core.py
-------------------
-Unit tests cho các core modules.
-
-Chạy: pytest tests/ -v
-
-Tại sao viết tests?
-1. Verify code hoạt động đúng
-2. Khi phỏng vấn: "Bạn có viết tests không?" → "Có, tôi dùng pytest"
-3. Khi thay đổi code, test giúp phát hiện regression
-
-Các loại test trong project này:
-- Unit test: test 1 function/class riêng lẻ (không cần DB thật, không cần API)
-- Integration test: test nhiều component cùng nhau (cần DB thật)
-"""
-
 import pytest
 import pandas as pd
 import sqlite3
